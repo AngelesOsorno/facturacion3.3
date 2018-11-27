@@ -1,1 +1,5 @@
-xsd cfdv33.xsd tdCFDI.xsd catCFDI.xsd /classes
+You have to using the Visual Studio command-line tool to write the following command (ARM Cross Tools Command Prompt) 
+and enter the folder of project
+
+
+*Command* ---> xsd cfdv33.xsd tdCFDI.xsd catCFDI.xsd /classes
