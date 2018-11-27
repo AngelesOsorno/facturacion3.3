@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91a1eeb3-3891-4a58-812a-4eaef58dd4cf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservice.facturacenter.com.mx/Timbrado.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Timbrado.xsd" MetadataType="Schema" ID="e1f99cc8-8072-4a43-9cef-af20f783cf54" SourceId="1" SourceUrl="http://webservice.facturacenter.com.mx/Timbrado.svc?xsd=xsd3" />
+    <MetadataFile FileName="svcTimbrado.wsdl" MetadataType="Wsdl" ID="27ef50bd-9f7e-43ff-a077-50bad6ecbc1d" SourceId="1" SourceUrl="http://webservice.facturacenter.com.mx/Timbrado.svc?wsdl" />
+    <MetadataFile FileName="Timbrado1.xsd" MetadataType="Schema" ID="7494dc35-b092-4eef-9a5a-f551101a6f87" SourceId="1" SourceUrl="http://webservice.facturacenter.com.mx/Timbrado.svc?xsd=xsd0" />
+    <MetadataFile FileName="Timbrado2.xsd" MetadataType="Schema" ID="a06335f1-b62d-4d26-be29-407eeb1f98d6" SourceId="1" SourceUrl="http://webservice.facturacenter.com.mx/Timbrado.svc?xsd=xsd2" />
+    <MetadataFile FileName="Timbrado3.xsd" MetadataType="Schema" ID="ac49abb5-0b6f-4204-8034-8ee409e445b9" SourceId="1" SourceUrl="http://webservice.facturacenter.com.mx/Timbrado.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

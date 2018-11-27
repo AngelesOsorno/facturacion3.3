@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Xml.Schema;
 using System.Xml.Serialization;
 
 // 
@@ -44,7 +45,7 @@ public partial class Comprobante {
     
     private string folioField;
     
-    private System.DateTime fechaField;
+    private string fechaField;
     
     private string selloField;
     
@@ -81,7 +82,10 @@ public partial class Comprobante {
     private string lugarExpedicionField;
     
     private string confirmacionField;
-    
+
+    [XmlAttribute("schemaLocation", Namespace = XmlSchema.InstanceNamespace)]
+    public string xsiSchemaLocation = "http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd";
+
     public Comprobante() {
         this.versionField = "3.3";
     }
@@ -193,7 +197,7 @@ public partial class Comprobante {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public System.DateTime Fecha {
+    public string Fecha {
         get {
             return this.fechaField;
         }
@@ -286,6 +290,7 @@ public partial class Comprobante {
             return this.descuentoField;
         }
         set {
+            descuentoFieldSpecified = true;
             this.descuentoField = value;
         }
     }
@@ -508,7 +513,6 @@ public partial class ComprobanteEmisor {
     }
 }
 
-
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
 [System.SerializableAttribute()]
@@ -595,9 +599,6 @@ public partial class ComprobanteReceptor {
         }
     }
 }
-
-
-
 
 
 /// <remarks/>
@@ -785,6 +786,8 @@ public partial class ComprobanteConcepto {
             return this.descuentoField;
         }
         set {
+            //Agregamos a los campos opcionales (FieldSpecified) si queremos verlos en el .xml
+            descuentoFieldSpecified = true;
             this.descuentoField = value;
         }
     }
