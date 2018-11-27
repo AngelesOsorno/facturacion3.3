@@ -1,0 +1,4 @@
+Web service SOAP: http://webservice.facturacenter.com.mx/Timbrado.svc?wsdl
+
+Users: TEST010101ST
+Password: aaaaa
