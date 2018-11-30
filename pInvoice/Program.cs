@@ -34,33 +34,34 @@ namespace pInvoice
             Comprobante oComprobante = new Comprobante();
             oComprobante.Version = "3.3";
             oComprobante.Serie = "PF";
-            oComprobante.Folio = "0002584";
+            oComprobante.Folio = "026711";
             oComprobante.Fecha = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
             //oComprobante.Sello = "Faltante"; 
             oComprobante.FormaPago = "99";
             oComprobante.NoCertificado = numeroCertificado;
             //oComprobante.Certificado = "Faltante"; 
-            oComprobante.SubTotal = 10m;
-            oComprobante.Descuento = 1;
+            oComprobante.SubTotal = 336.00m;
+            oComprobante.Descuento = 0;
             oComprobante.Moneda = "MXN";
             //oComprobante.TipoCambio = 17.20m;
-            oComprobante.Total = 9;
+            oComprobante.Total = 389.76m;
             oComprobante.TipoDeComprobante = "I";
-            oComprobante.MetodoPago = "PUE";
+            oComprobante.MetodoPago = "PPD";
             oComprobante.LugarExpedicion = "27000";
+            oComprobante.CondicionesDePago = "30 DIAS DE CREDITO";
             
 
             ComprobanteEmisor oEmisor = new ComprobanteEmisor();
 
-            oEmisor.Rfc = "XXXXXXXX";
-            oEmisor.Nombre = "Marathon group";
-            oEmisor.RegimenFiscal = "01";
+            oEmisor.Rfc = "MEP900430F74";
+            oEmisor.Nombre = "MARATHON ELECTRICA DE PUEBLA S.A. DE C.V.";
+            oEmisor.RegimenFiscal = "601";
             
 
             ComprobanteReceptor oReceptor = new ComprobanteReceptor();
-            oReceptor.Nombre = "Pepe";
-            oReceptor.Rfc = "7777777777777";
-            oReceptor.UsoCFDI = "P01";
+            oReceptor.Nombre = "JOCAR INGENIERIA EN MANTENIMIENTO S.A. DE C.V.";
+            oReceptor.Rfc = "JIM8410225I2";
+            oReceptor.UsoCFDI = "G01";
 
 
             oComprobante.Emisor = oEmisor;
@@ -70,14 +71,25 @@ namespace pInvoice
             List<ComprobanteConcepto> listConceptos = new List<ComprobanteConcepto>();
 
             ComprobanteConcepto oConcepto = new ComprobanteConcepto();
+            oConcepto.ValorUnitario = 3.36m;
+            oConcepto.Unidad = "M";
+            oConcepto.NoIdentificacion = "SLYZ54 0";
+            oConcepto.Importe = 336.00m;
+            oConcepto.Descripcion = "CABLE THMW NYLON ROJO 16 AWG";
+            oConcepto.ClaveProdServ = "26121634";
+            oConcepto.Cantidad = 100m;
 
-            oConcepto.Importe = 12.58m;
-            oConcepto.ClaveProdServ = "1220";
-
-            oConcepto.Descuento = 1;
             listConceptos.Add(oConcepto);
 
             oComprobante.Conceptos = listConceptos.ToArray();
+
+            List<ComprobanteImpuestosTraslado> listImpuestosTraslado = new List<ComprobanteImpuestosTraslado>();
+
+            ComprobanteImpuestosTraslado oImpuestosTraslado = new ComprobanteImpuestosTraslado();
+            oImpuestosTraslado.Importe = 53.76m;
+
+            listImpuestosTraslado.Add(oImpuestosTraslado);
+           
 
             //Creamos el xml selleado
             CreateXML(oComprobante);
